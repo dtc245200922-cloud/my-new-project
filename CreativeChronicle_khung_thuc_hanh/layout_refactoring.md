@@ -1,0 +1,3 @@
+# Phân tích tái cấu trúc
+
+Phần tử dùng position: absolute thoát khỏi luồng bố cục, nên chiều cao của nó không làm phần tử cha tự mở rộng. Khi gallery phụ thuộc tọa độ và chiều cao cố định, thay đổi kích thước màn hình hoặc nội dung có thể gây tràn, che văn bản và khó bảo trì. Absolute vẫn hữu ích cho biểu tượng hoặc lớp phủ, nhưng không phù hợp để dàn toàn bộ gallery này. CSS Grid giữ các ảnh trong luồng, kiểm soát hàng và cột bằng grid-template-areas hoặc span, đồng thời dùng gap để thống nhất khoảng cách. Media Query chuyển gallery thành một cột trên mobile. Flexbox xử lý thanh tác giả với align-items và flex-wrap; Bootstrap chia bài viết đề xuất theo các breakpoint sẵn có. Kết hợp object-fit: cover giúp ảnh không bị méo.

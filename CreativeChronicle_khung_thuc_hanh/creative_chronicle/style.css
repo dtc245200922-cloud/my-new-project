@@ -1,0 +1,25 @@
+/* Ví dụ Grid cho một component gallery, không dùng định vị tuyệt đối. */
+.mosaic-gallery {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-areas: "main sub1" "main sub2";
+    gap: 15px;
+}
+.photo-main { grid-area: main; }
+.photo-sub-1 { grid-area: sub1; }
+.photo-sub-2 { grid-area: sub2; }
+.mosaic-gallery > div { min-width: 0; }
+.mosaic-gallery img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 767.98px) {
+    .mosaic-gallery {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "main" "sub1" "sub2";
+    }
+}
+/* Học viên bổ sung kích thước khung ảnh linh hoạt bằng aspect-ratio,
+   hoàn thiện thanh tác giả và kiểm tra nội dung dài. */
