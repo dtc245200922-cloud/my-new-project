@@ -1,0 +1,5 @@
+/* Bootstrap đảm nhiệm toàn bộ việc chia cột responsive. */
+.card-img-top { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+figure { margin-bottom: 0; }
+.card { transition: box-shadow 0.2s ease; }
+.card:hover { box-shadow: 0 6px 18px rgba(0,0,0,0.15) !important; }
